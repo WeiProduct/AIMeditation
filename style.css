@@ -158,6 +158,41 @@ body {
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
 }
 
+/* App Mockup Styles */
+.app-mockup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.phone-frame {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 40px;
+    padding: 60px 40px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+}
+
+.app-icon-display {
+    width: 120px;
+    height: 120px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.phone-frame h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.phone-frame p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
 /* Features Section */
 .features {
     padding: 80px 0;
@@ -242,6 +277,28 @@ body {
     font-weight: 500;
 }
 
+/* Screenshot Placeholders */
+.screenshot-placeholder {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 20px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.screenshot-placeholder .feature-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.screenshot-placeholder h4 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
 /* Download Section */
 .download {
     padding: 80px 0;
@@ -291,6 +348,40 @@ body {
 .qr-code p {
     margin-top: 0.5rem;
     font-size: 0.9rem;
+}
+
+/* QR Placeholder */
+.qr-placeholder {
+    width: 150px;
+    height: 150px;
+    background: var(--white);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.qr-placeholder .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.qr-placeholder p {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* App Store Button */
+.app-store-icon {
+    width: 180px;
+    height: 60px;
+    transition: transform 0.3s;
+}
+
+.app-store-btn:hover .app-store-icon {
+    transform: scale(1.05);
 }
 
 /* Footer */
