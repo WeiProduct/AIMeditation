@@ -76,6 +76,24 @@ body {
     color: var(--primary-color);
 }
 
+/* Language Toggle Button */
+.lang-toggle {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 1rem;
+    transition: all 0.3s;
+}
+
+.lang-toggle:hover {
+    background: #2d3954;
+    transform: translateY(-2px);
+}
+
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;

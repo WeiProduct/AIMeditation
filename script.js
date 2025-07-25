@@ -1,3 +1,10 @@
+// Language toggle function
+function toggleLanguage() {
+    const currentLang = localStorage.getItem('language') || 'zh-CN';
+    const newLang = currentLang === 'zh-CN' ? 'en' : 'zh-CN';
+    setLanguage(newLang);
+}
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
