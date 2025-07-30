@@ -46,6 +46,7 @@ const translations = {
         'download.subtitle': '开启您的正念之旅',
         'download.appStore': 'App Store',
         'download.comingSoon': '即将上线',
+        'download.scanToDownload': '扫码下载',
         
         // Footer
         'footer.appName': 'AI冥想',
@@ -108,6 +109,7 @@ const translations = {
         'download.subtitle': 'Start your mindfulness journey',
         'download.appStore': 'App Store',
         'download.comingSoon': 'Coming Soon',
+        'download.scanToDownload': 'Scan to Download',
         
         // Footer
         'footer.appName': 'AI Meditation',
