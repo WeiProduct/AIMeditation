@@ -57,7 +57,7 @@ const translations = {
         'footer.contact': '联系我们',
         'footer.email': '邮箱',
         'footer.website': '网站',
-        'footer.copyright': '© 2025 Wei Product. 保留所有权利。',
+        'footer.copyright': '© 2026 WeiProduct. 保留所有权利。',
         
         // Language Toggle
         'lang.switch': 'EN',
@@ -120,7 +120,7 @@ const translations = {
         'footer.contact': 'Contact Us',
         'footer.email': 'Email',
         'footer.website': 'Website',
-        'footer.copyright': '© 2025 Wei Product. All rights reserved.',
+        'footer.copyright': '© 2026 WeiProduct. All rights reserved.',
         
         // Language Toggle
         'lang.switch': '中文',

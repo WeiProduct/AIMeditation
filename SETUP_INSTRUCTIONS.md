@@ -2,14 +2,14 @@
 
 ## 步骤1：推送代码到GitHub
 
-由于需要GitHub认证，请在终端中执行以下命令：
+如需手动部署，请在终端中执行以下命令：
 
 ```bash
-cd /Users/weifu/Desktop/AIMeditation
+cd /Users/andy/Desktop/weiproduct-product-sites/AIMeditation
 git push -u origin main
 ```
 
-如果提示输入用户名和密码，请使用您的GitHub账号信息。
+当前仓库已配置 GitHub Pages，可直接推送到 `main` 分支触发发布。
 
 ## 步骤2：启用GitHub Pages
 
@@ -29,10 +29,10 @@ https://weiproduct.github.io/AIMeditation/
 
 ## 步骤4：更新App Store链接
 
-当您的应用在App Store上架后，请更新以下文件中的链接：
+App Store 链接已经配置在以下文件中，应用链接变化时再更新：
 
 1. 编辑 `index.html`
-2. 查找 `href="#"` 的下载按钮
+2. 查找 `apps.apple.com`
 3. 替换为您的App Store链接
 
 ## 需要添加的内容
@@ -58,7 +58,7 @@ https://weiproduct.github.io/AIMeditation/
 
 ## 自定义域名（可选）
 
-如果您想使用自定义域名：
+此产品站默认使用 GitHub Pages 地址，保持与公司主站 `weiproduct.com` 分开。如果之后要单独配置产品子域名：
 
 1. 在仓库根目录创建 `CNAME` 文件
 2. 在文件中写入您的域名（如：aimeditation.weiproduct.com）

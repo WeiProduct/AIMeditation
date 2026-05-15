@@ -5,8 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI冥想 - 智能冥想助手</title>
     <meta name="description" content="AI冥想是您的智能冥想伙伴，通过先进的AI技术为您提供个性化的冥想体验。支持中英双语，26个精选音频，无需注册即可使用。">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1e2846">
+    <link rel="canonical" href="https://weiproduct.github.io/AIMeditation/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="WeiProduct">
+    <meta property="og:title" content="AI冥想 - 智能冥想助手">
+    <meta property="og:description" content="A bilingual AI meditation companion with guided sessions, music meditation, timer practice, and privacy-first usage.">
+    <meta property="og:url" content="https://weiproduct.github.io/AIMeditation/">
+    <meta property="og:image" content="https://weiproduct.github.io/AIMeditation/images/screenshot-3.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Meditation">
+    <meta name="twitter:description" content="Personalized meditation guidance, curated audio, and mindful practice tracking for iPhone and iPad.">
+    <meta name="twitter:image" content="https://weiproduct.github.io/AIMeditation/images/screenshot-3.png">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="images/icon.png">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AI Meditation",
+        "alternateName": "AI冥想",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "iOS, iPadOS",
+        "description": "A bilingual AI meditation app with guided meditation, curated audio, timer sessions, mood tracking, and privacy-first use.",
+        "url": "https://weiproduct.github.io/AIMeditation/",
+        "downloadUrl": "https://apps.apple.com/us/app/ai%E5%86%A5%E6%83%B3/id6749164175",
+        "image": "https://weiproduct.github.io/AIMeditation/images/screenshot-3.png",
+        "creator": {
+            "@type": "Organization",
+            "name": "WeiProduct",
+            "url": "https://weiproduct.com/"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
     <script src="translations.js"></script>
 </head>
 <body>
@@ -14,7 +51,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <img src="images/icon.png" alt="AI冥想" class="nav-icon">
+                <span class="nav-logo-mark" aria-hidden="true"></span>
                 <span data-i18n="hero.title">AI冥想</span>
             </div>
             <div class="nav-links">
@@ -22,7 +59,7 @@
                 <a href="#screenshots" data-i18n="nav.screenshots">应用截图</a>
                 <a href="#download" data-i18n="nav.download">下载</a>
                 <a href="#contact" data-i18n="nav.contact">联系我们</a>
-                <button class="lang-toggle" onclick="toggleLanguage()">
+                <button class="lang-toggle" id="languageToggle" type="button" aria-label="Switch language">
                     <span data-i18n="lang.switch">EN</span>
                 </button>
             </div>
@@ -37,7 +74,7 @@
                 <h2 data-i18n="hero.subtitle">您的智能冥想伙伴</h2>
                 <p data-i18n="hero.description">通过先进的AI技术，为您提供个性化的冥想体验<br>找到内心的平静，开启正念之旅</p>
                 <div class="hero-buttons">
-                    <a href="https://apps.apple.com/us/app/ai%E5%86%A5%E6%83%B3/id6749164175" class="btn btn-primary" target="_blank">
+                    <a href="https://apps.apple.com/us/app/ai%E5%86%A5%E6%83%B3/id6749164175" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
                         <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M17 18C17.5304 18 18.0391 18.2107 18.4142 18.5858C18.7893 18.9609 19 19.4696 19 20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22C16.4696 22 15.9609 21.7893 15.5858 21.4142C15.2107 21.0391 15 20.5304 15 20H9C9 20.5304 8.78929 21.0391 8.41421 21.4142C8.03914 21.7893 7.53043 22 7 22C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20C5 19.4696 5.21071 18.9609 5.58579 18.5858C5.96086 18.2107 6.46957 18 7 18H17ZM7 18H17V7C17 6.73478 16.8946 6.48043 16.7071 6.29289C16.5196 6.10536 16.2652 6 16 6H8C7.73478 6 7.48043 6.10536 7.29289 6.29289C7.10536 6.48043 7 6.73478 7 7V18ZM7 18C6.46957 18 5.96086 17.7893 5.58579 17.4142C5.21071 17.0391 5 16.5304 5 16V7C5 6.20435 5.31607 5.44129 5.87868 4.87868C6.44129 4.31607 7.20435 4 8 4H16C16.7956 4 17.5587 4.31607 18.1213 4.87868C18.6839 5.44129 19 6.20435 19 7V16C19 16.5304 18.7893 17.0391 18.4142 17.4142C18.0391 17.7893 17.5304 18 17 18ZM10 10V14H14V10H10Z"/>
                         </svg>
@@ -49,9 +86,7 @@
             <div class="hero-image">
                 <div class="app-mockup">
                     <div class="phone-frame">
-                        <img src="images/icon.png" alt="AI冥想" class="app-icon-display">
-                        <h3 data-i18n="hero.title">AI冥想</h3>
-                        <p data-i18n="hero.appSubtitle">您的智能冥想伙伴</p>
+                        <img src="images/screenshot-3.png" alt="AI Meditation guided audio screen" class="hero-screenshot" width="600" height="1300" loading="eager">
                     </div>
                 </div>
             </div>
@@ -103,19 +138,19 @@
             <h2 class="section-title" data-i18n="screenshots.title">应用截图</h2>
             <div class="screenshots-carousel">
                 <div class="screenshot">
-                    <img src="images/screenshot-3.png" alt="Music Meditation" class="screenshot-image">
+                    <img src="images/screenshot-3.png" alt="Music meditation library in AI Meditation" class="screenshot-image" width="600" height="1300" loading="lazy">
                     <p data-i18n="screenshots.music.description">丰富的冥想音频</p>
                 </div>
                 <div class="screenshot">
-                    <img src="images/screenshot-1.png" alt="Guided Meditation" class="screenshot-image">
+                    <img src="images/screenshot-1.png" alt="Guided meditation playback controls" class="screenshot-image" width="600" height="1300" loading="lazy">
                     <p data-i18n="screenshots.player.description">精美的播放控制</p>
                 </div>
                 <div class="screenshot">
-                    <img src="images/screenshot-2.png" alt="Timer Meditation" class="screenshot-image">
+                    <img src="images/screenshot-2.png" alt="AI Meditation main interface" class="screenshot-image" width="600" height="1300" loading="lazy">
                     <p data-i18n="screenshots.main.description">简洁优雅的主界面</p>
                 </div>
                 <div class="screenshot">
-                    <img src="images/screenshot-4.png" alt="AI Assistant" class="screenshot-image">
+                    <img src="images/screenshot-4.png" alt="AI meditation assistant chat" class="screenshot-image" width="600" height="1300" loading="lazy">
                     <p data-i18n="screenshots.ai.description">智能AI冥想指导</p>
                 </div>
             </div>
@@ -128,14 +163,14 @@
             <h2 class="section-title" data-i18n="download.title">立即下载</h2>
             <p class="download-subtitle" data-i18n="download.subtitle">开启您的正念之旅</p>
             <div class="download-buttons">
-                <a href="https://apps.apple.com/us/app/ai%E5%86%A5%E6%83%B3/id6749164175" class="download-btn app-store-btn" target="_blank">
+                <a href="https://apps.apple.com/us/app/ai%E5%86%A5%E6%83%B3/id6749164175" class="download-btn app-store-btn" target="_blank" rel="noopener noreferrer">
                     <svg class="app-store-icon" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
                         <rect width="120" height="40" rx="5" fill="black"/>
                         <text x="60" y="25" text-anchor="middle" fill="white" font-size="14" font-family="Arial" data-i18n="download.appStore">App Store</text>
                     </svg>
                 </a>
                 <div class="qr-code">
-                    <img src="images/qr-code.png" alt="扫码下载" class="qr-code-img">
+                    <img src="images/qr-code.png" alt="AI Meditation download QR code" class="qr-code-img" width="530" height="530" loading="lazy">
                     <p data-i18n="download.scanToDownload">扫码下载</p>
                 </div>
             </div>
@@ -161,12 +196,12 @@
                 </div>
                 <div class="footer-section">
                     <h4 data-i18n="footer.contact">联系我们</h4>
-                    <p><span data-i18n="footer.email">邮箱</span>: support@weiproduct.com</p>
+                    <p><span data-i18n="footer.email">邮箱</span>: 1597498880weiproduct@gmail.com</p>
                     <p><span data-i18n="footer.website">网站</span>: weiproduct.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footer.copyright">&copy; 2025 Wei Product. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 WeiProduct. All rights reserved.</p>
             </div>
         </div>
     </footer>
