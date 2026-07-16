@@ -42,7 +42,38 @@ const I18N = {
     footerTagline: '你的智能冥想伙伴，陪你呼吸、入睡与专注。',
     footerQuick: '快速链接', footerPrivacy: '隐私政策', footerSupport: '技术支持', footerContact: '联系我们',
     footerEmail: '邮箱', footerWebsite: '网站', footerRights: 'WeiProduct. 保留所有权利。',
-    stickySub: 'AI 冥想教练 · 免费', stickyGet: '获取'
+    stickySub: 'AI 冥想教练 · 免费', stickyGet: '获取',
+    eyeHow: '使用方式', eyeTry: '亲自体验', eyeMoments: '为这些时刻而生', eyeFeatures: '核心功能',
+    eyeLibrary: '内容库', eyeShots: '真实截图', eyePrivacy: '隐私承诺', eyeCompare: '对比', eyeFaq: '答疑',
+    tryTitle: '在这里，先试一分钟', trySub: '不用下载也能先呼吸一次——选一个节奏开始。',
+    tryP1: '入睡 4-7-8', tryP2: '专注方块 4-4-4-4', tryP3: '平静 4-6',
+    tryStart: '开始 1 分钟', tryStop: '停止', tryReady: '准备好了就开始',
+    tryInhale: '吸气', tryHold: '屏息', tryExhale: '呼气', tryLeft: '还剩 {s} 秒',
+    tryDoneTitle: '感觉到了吗？', tryDoneDesc: 'App 里还有 26 段引导等你。', tryDoneBtn: 'App Store 下载',
+    momentsTitle: '总有一个时刻，适合安静下来', momentsSub: '四个真实场景，四种进入方式。',
+    m1Title: '睡不着的夜', m1Desc: '思绪停不下来？让引导语音替你放慢呼吸，把身体先送入睡眠。', m1Tag: '7 天深睡计划',
+    m2Title: '高压的下午', m2Desc: '会议之间的十分钟，做一段快速平复练习，有疑问随时问 AI 教练。', m2Tag: '缓解焦虑 + AI 教练',
+    m3Title: '想养成习惯的早晨', m3Desc: '出门前的五分钟计时冥想，心情与连续天数自动记下，习惯悄悄长成。', m3Tag: '计时冥想 + 记录',
+    m4Title: '第一次尝试冥想', m4Desc: '不知道从哪开始？引导冥想一步一步带你入门，零基础也不慌。', m4Tag: '引导冥想',
+    libTitle: '看看里面都有什么', libSub: '从 7 晚的睡眠旅程到自由计时，每一段都有它的位置。',
+    libPlanTitle: '7 天深度睡眠计划', libPlanDesc: '每晚一段引导，循序渐进，从放松身体到自然入睡。',
+    libN1: '第 1 晚', libN2: '第 2 晚', libN3: '第 3 晚', libN4: '第 4 晚', libN5: '第 5 晚', libN6: '第 6 晚', libN7: '第 7 晚',
+    libD1: '放松身体', libD2: '放慢呼吸', libD3: '身体扫描', libD4: '放下思绪', libD5: '延长呼气', libD6: '安定心绪', libD7: '自然入睡',
+    libC1t: '缓解焦虑系列', libC1d: '高压时刻的快速平复练习。',
+    libC2t: '自然环境音', libC2d: '雨声、森林与海浪，如临其境。',
+    libC3t: '专业冥想音乐', libC3d: '为放松与专注而作的音乐。',
+    libC4t: '自由计时', libC4d: '任意时长，背景音由你选。',
+    libChip: '26 段精选，持续更新',
+    shot4: '背景音随心选',
+    compareTitle: '为什么是 AI冥想', compareSub: '同样是想安静下来，体验可以很不一样。',
+    cCol1: '自己摸索', cCol2: '传统冥想 App', cCol3: 'AI冥想',
+    cR1: '个性化指导', cR1a: '没有反馈，全靠自己琢磨', cR1b: '固定课程，人人相同', cR1c: 'AI 教练根据你的记录调整',
+    cR2: '上手门槛', cR2a: '不知道从哪开始', cR2b: '先注册，再挑方案', cR2c: '无需注册，30 秒开始',
+    cR3: '你的数据', cR3b: '常常同步到云端', cR3c: '全部留在设备上',
+    cR4: '价格', cR4a: '免费，但没有引导', cR4b: '通常需要订阅', cR4c: '免费下载',
+    cR5: '语言', cR5b: '多为单一语言', cR5c: '中英双语',
+    footerGet: '获取 App', footerScan: '扫码前往 App Store',
+    themeDark: '深色模式', themeLight: '浅色模式'
   },
   'en': {
     skip: 'Skip to content',
@@ -86,7 +117,38 @@ const I18N = {
     footerTagline: 'Your smart meditation companion for breathing, sleep, and focus.',
     footerQuick: 'Quick Links', footerPrivacy: 'Privacy Policy', footerSupport: 'Support', footerContact: 'Contact',
     footerEmail: 'Email', footerWebsite: 'Website', footerRights: 'WeiProduct. All rights reserved.',
-    stickySub: 'AI meditation coach · Free', stickyGet: 'Get'
+    stickySub: 'AI meditation coach · Free', stickyGet: 'Get',
+    eyeHow: 'HOW IT WORKS', eyeTry: 'TRY IT', eyeMoments: 'MADE FOR THESE MOMENTS', eyeFeatures: 'FEATURES',
+    eyeLibrary: 'THE LIBRARY', eyeShots: 'SCREENSHOTS', eyePrivacy: 'PRIVACY', eyeCompare: 'WHY US', eyeFaq: 'FAQ',
+    tryTitle: 'Try one minute, right here', trySub: 'No download needed for your first breath — pick a rhythm and begin.',
+    tryP1: 'Sleep 4-7-8', tryP2: 'Focus box 4-4-4-4', tryP3: 'Calm 4-6',
+    tryStart: 'Start 1 minute', tryStop: 'Stop', tryReady: 'Ready when you are',
+    tryInhale: 'Inhale', tryHold: 'Hold', tryExhale: 'Exhale', tryLeft: '{s}s left',
+    tryDoneTitle: 'Felt that?', tryDoneDesc: '26 guided sessions await in the app.', tryDoneBtn: 'Download on App Store',
+    momentsTitle: 'There is always a moment made for stillness', momentsSub: 'Four real moments, four ways in.',
+    m1Title: 'The racing-mind night', m1Desc: 'Thoughts won’t stop? Let a guided voice slow your breath and ease your body into sleep first.', m1Tag: '7-day sleep plan',
+    m2Title: 'The pressure-cooker afternoon', m2Desc: 'Ten minutes between meetings: a quick calming session, with the AI coach on call for anything.', m2Tag: 'Anxiety relief + AI coach',
+    m3Title: 'The habit-building morning', m3Desc: 'Five timed minutes before you head out — mood and streak logged automatically, a habit quietly grows.', m3Tag: 'Timer + streak log',
+    m4Title: 'The very first session', m4Desc: 'Not sure where to start? Guided meditations walk you in step by step — no experience needed.', m4Tag: 'Guided meditations',
+    libTitle: 'A look inside the library', libSub: 'From a 7-night sleep journey to an open timer, every session has its place.',
+    libPlanTitle: '7-day deep-sleep plan', libPlanDesc: 'One guided session each night, easing you from unwinding to falling asleep naturally.',
+    libN1: 'Night 1', libN2: 'Night 2', libN3: 'Night 3', libN4: 'Night 4', libN5: 'Night 5', libN6: 'Night 6', libN7: 'Night 7',
+    libD1: 'Unwind the body', libD2: 'Slow the breath', libD3: 'Body scan', libD4: 'Let thoughts drift', libD5: 'Longer exhales', libD6: 'Settle the mind', libD7: 'Drift off naturally',
+    libC1t: 'Anxiety-relief series', libC1d: 'Quick calm-downs for high-pressure moments.',
+    libC2t: 'Natural soundscapes', libC2d: 'Rain, forest, and ocean waves.',
+    libC3t: 'Meditation music', libC3d: 'Composed for rest and focus.',
+    libC4t: 'Open timer', libC4d: 'Any length, your choice of backdrop.',
+    libChip: '26 curated tracks, growing',
+    shot4: 'Pick your backdrop sound',
+    compareTitle: 'Why AI Meditation', compareSub: 'Same goal — a quieter mind. Very different experiences.',
+    cCol1: 'Going it alone', cCol2: 'A typical meditation app', cCol3: 'AI Meditation',
+    cR1: 'Personalized guidance', cR1a: 'No feedback, all guesswork', cR1b: 'Fixed courses, same for everyone', cR1c: 'An AI coach adapts to your history',
+    cR2: 'Getting started', cR2a: 'Hard to know where to begin', cR2b: 'Sign up first, then pick a plan', cR2c: 'No sign-up, breathing in 30 seconds',
+    cR3: 'Your data', cR3b: 'Often synced to the cloud', cR3c: 'Stays on your device',
+    cR4: 'Price', cR4a: 'Free, but unguided', cR4b: 'Usually a subscription', cR4c: 'Free to download',
+    cR5: 'Language', cR5b: 'Mostly single-language', cR5c: 'EN + 中文',
+    footerGet: 'Get the app', footerScan: 'Scan for the App Store',
+    themeDark: 'Dark mode', themeLight: 'Light mode'
   }
 };
 
@@ -103,8 +165,9 @@ function applyLang(lang) {
   document.title = currentLang === 'zh-CN'
     ? 'AI冥想 - 智能冥想助手 | AI Meditation'
     : 'AI Meditation - Sleep, Calm & Focus Coach';
-  const ls = document.getElementById('langSwitch');
-  if (ls) ls.textContent = currentLang === 'zh-CN' ? 'EN' : '中文';
+  document.querySelectorAll('.js-lang-switch').forEach(b => {
+    b.textContent = currentLang === 'zh-CN' ? 'EN' : '中文';
+  });
   // Swap privacy / support pages to the matching language
   const priv = document.querySelector('a[data-page="privacy"]');
   if (priv) priv.href = currentLang === 'zh-CN' ? 'privacy.html' : 'privacy-en.html';
@@ -125,6 +188,11 @@ function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   const meta = document.getElementById('themeColorMeta');
   if (meta) meta.setAttribute('content', theme === 'dark' ? '#0e1020' : '#1e2846');
+  document.querySelectorAll('.js-theme-label').forEach(sp => {
+    const key = theme === 'dark' ? 'themeLight' : 'themeDark';
+    sp.setAttribute('data-i18n', key);
+    sp.textContent = I18N[currentLang][key];
+  });
   try { localStorage.setItem('theme', theme); } catch (e) {}
 }
 function initTheme() {
@@ -202,17 +270,110 @@ function initReveal() {
   els.forEach((el, i) => { el.style.transitionDelay = (Math.min(i, 6) * 0.05) + 's'; io.observe(el); });
 }
 
-// ===== Nav + sticky =====
+// ===== Nav + sticky + progress =====
 function initScroll() {
   const nav = document.getElementById('navbar');
   const sticky = document.getElementById('stickyCta');
+  const prog = document.getElementById('scrollProgress');
   const onScroll = () => {
     const y = window.scrollY;
     if (nav) nav.classList.toggle('scrolled', y > 20);
     if (sticky) sticky.classList.toggle('show', y > 620);
+    if (prog) {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (max > 0 ? Math.min(100, (y / max) * 100) : 0) + '%';
+    }
   };
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
   onScroll();
+}
+
+// ===== Try-a-minute breathing widget =====
+function initBreath() {
+  const btn = document.getElementById('tryStartBtn');
+  const orb = document.getElementById('tryOrb');
+  const phaseEl = document.getElementById('tryPhase');
+  const countEl = document.getElementById('tryCount');
+  const prog = document.getElementById('tryProgress');
+  const doneCard = document.getElementById('tryDone');
+  if (!btn || !orb || !phaseEl || !countEl || !prog) return;
+  const btnLabel = btn.querySelector('span');
+  const chips = Array.from(document.querySelectorAll('.try-chip'));
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const CIRC = 2 * Math.PI * 96;
+  const TOTAL = 60;
+  prog.style.strokeDasharray = CIRC;
+  prog.style.strokeDashoffset = CIRC;
+
+  let pattern = [4, 7, 8, 0];
+  let running = false, raf = 0, t0 = 0;
+  let lastPhase = '', lastCount = '';
+
+  const easeInOut = t => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
+
+  function phaseAt(elapsed) {
+    const segs = [
+      { key: 'tryInhale', dur: pattern[0], from: 0.72, to: 1.14 },
+      { key: 'tryHold', dur: pattern[1], from: 1.14, to: 1.14 },
+      { key: 'tryExhale', dur: pattern[2], from: 1.14, to: 0.72 },
+      { key: 'tryHold', dur: pattern[3], from: 0.72, to: 0.72 }
+    ].filter(s => s.dur > 0);
+    const cycle = segs.reduce((a, s) => a + s.dur, 0);
+    let t = elapsed % cycle;
+    for (const s of segs) {
+      if (t < s.dur) return { key: s.key, scale: s.from + (s.to - s.from) * easeInOut(t / s.dur) };
+      t -= s.dur;
+    }
+    return { key: segs[0].key, scale: segs[0].from };
+  }
+
+  function tick(now) {
+    const elapsed = (now - t0) / 1000;
+    if (elapsed >= TOTAL) { stop(true); return; }
+    const t = I18N[currentLang];
+    const p = phaseAt(elapsed);
+    if (!reduce.matches) orb.style.transform = 'translate(-50%, -50%) scale(' + p.scale.toFixed(3) + ')';
+    const pTxt = t[p.key];
+    if (pTxt !== lastPhase) { phaseEl.textContent = pTxt; lastPhase = pTxt; }
+    const cTxt = t.tryLeft.replace('{s}', Math.ceil(TOTAL - elapsed));
+    if (cTxt !== lastCount) { countEl.textContent = cTxt; lastCount = cTxt; }
+    prog.style.strokeDashoffset = CIRC * (1 - elapsed / TOTAL);
+    raf = requestAnimationFrame(tick);
+  }
+
+  function start() {
+    running = true;
+    if (doneCard) doneCard.hidden = true;
+    t0 = performance.now();
+    lastPhase = ''; lastCount = '';
+    phaseEl.removeAttribute('data-i18n');
+    btnLabel.setAttribute('data-i18n', 'tryStop');
+    btnLabel.textContent = I18N[currentLang].tryStop;
+    prog.style.strokeDashoffset = CIRC;
+    raf = requestAnimationFrame(tick);
+  }
+
+  function stop(finished) {
+    running = false;
+    cancelAnimationFrame(raf);
+    btnLabel.setAttribute('data-i18n', 'tryStart');
+    btnLabel.textContent = I18N[currentLang].tryStart;
+    phaseEl.setAttribute('data-i18n', 'tryReady');
+    phaseEl.textContent = I18N[currentLang].tryReady;
+    countEl.textContent = '';
+    orb.style.transform = '';
+    prog.style.strokeDashoffset = finished ? 0 : CIRC;
+    if (finished && doneCard) doneCard.hidden = false;
+  }
+
+  btn.addEventListener('click', () => (running ? stop(false) : start()));
+
+  chips.forEach(ch => ch.addEventListener('click', () => {
+    chips.forEach(c => c.classList.toggle('active', c === ch));
+    pattern = ch.getAttribute('data-pattern').split(',').map(Number);
+    if (running) { t0 = performance.now(); prog.style.strokeDashoffset = CIRC; }
+  }));
 }
 
 // ===== Init =====
@@ -222,14 +383,17 @@ document.addEventListener('DOMContentLoaded', () => {
   initGallery();
   initReveal();
   initScroll();
+  initBreath();
 
   const yr = document.getElementById('currentYear');
   if (yr) yr.textContent = new Date().getFullYear();
 
-  const ls = document.getElementById('langSwitch');
-  if (ls) ls.addEventListener('click', () => applyLang(currentLang === 'zh-CN' ? 'en' : 'zh-CN'));
-  const tt = document.getElementById('themeToggle');
-  if (tt) tt.addEventListener('click', () => setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+  document.querySelectorAll('.js-lang-switch').forEach(b => {
+    b.addEventListener('click', () => applyLang(currentLang === 'zh-CN' ? 'en' : 'zh-CN'));
+  });
+  document.querySelectorAll('.js-theme-toggle').forEach(b => {
+    b.addEventListener('click', () => setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+  });
 
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function (e) {

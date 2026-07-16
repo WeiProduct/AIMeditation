@@ -58,6 +58,7 @@
     </script>
 </head>
 <body>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
     <a class="skip-link" href="#main" data-i18n="skip">跳到主要内容</a>
 
     <nav class="navbar" id="navbar">
@@ -73,11 +74,11 @@
                 <a href="#features" class="nav-link" data-i18n="navFeatures">功能特色</a>
                 <a href="#screenshots" class="nav-link" data-i18n="navScreenshots">应用截图</a>
                 <a href="#faq" class="nav-link" data-i18n="navFaq">常见问题</a>
-                <button class="icon-btn" type="button" id="themeToggle" aria-label="切换深色模式">
+                <button class="icon-btn js-theme-toggle" type="button" id="themeToggle" aria-label="切换深色模式">
                     <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
                     <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/></svg>
                 </button>
-                <button class="lang-switch" type="button" id="langSwitch" aria-label="Switch language">EN</button>
+                <button class="lang-switch js-lang-switch" type="button" id="langSwitch" aria-label="Switch language">EN</button>
                 <a href="https://apps.apple.com/app/id6749164175" class="btn btn-primary btn-sm nav-cta" target="_blank" rel="noopener noreferrer" data-i18n="navGet">获取 App</a>
             </div>
         </div>
@@ -144,6 +145,7 @@
 
     <section id="how" class="how">
         <div class="container">
+            <span class="eyebrow section-eyebrow" data-i18n="eyeHow">使用方式</span>
             <h2 class="section-title" data-i18n="howTitle">三步进入平静</h2>
             <p class="section-sub" data-i18n="howSub">选一个当下，跟着呼吸，剩下的交给引导。</p>
             <div class="steps">
@@ -169,8 +171,78 @@
         </div>
     </section>
 
+    <section id="try" class="trybreath">
+        <div class="container">
+            <span class="eyebrow section-eyebrow" data-i18n="eyeTry">亲自体验</span>
+            <h2 class="section-title" data-i18n="tryTitle">在这里，先试一分钟</h2>
+            <p class="section-sub" data-i18n="trySub">不用下载也能先呼吸一次——选一个节奏开始。</p>
+            <div class="try-card reveal" id="tryStage">
+                <div class="try-patterns" role="group" aria-label="呼吸节奏">
+                    <button class="try-chip active" type="button" data-pattern="4,7,8,0"><span data-i18n="tryP1">入睡 4-7-8</span></button>
+                    <button class="try-chip" type="button" data-pattern="4,4,4,4"><span data-i18n="tryP2">专注方块 4-4-4-4</span></button>
+                    <button class="try-chip" type="button" data-pattern="4,0,6,0"><span data-i18n="tryP3">平静 4-6</span></button>
+                </div>
+                <div class="try-ring-wrap">
+                    <svg class="try-ring" viewBox="0 0 220 220" aria-hidden="true">
+                        <circle class="try-track" cx="110" cy="110" r="96"/>
+                        <circle class="try-progress" id="tryProgress" cx="110" cy="110" r="96"/>
+                    </svg>
+                    <div class="try-orb" id="tryOrb" aria-hidden="true"></div>
+                    <div class="try-readout" aria-live="polite">
+                        <span class="try-phase" id="tryPhase" data-i18n="tryReady">准备好了就开始</span>
+                        <span class="try-count" id="tryCount"></span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="button" id="tryStartBtn"><span data-i18n="tryStart">开始 1 分钟</span></button>
+                <div class="try-done" id="tryDone" hidden>
+                    <p><strong data-i18n="tryDoneTitle">感觉到了吗？</strong> <span data-i18n="tryDoneDesc">App 里还有 26 段引导等你。</span></p>
+                    <a href="https://apps.apple.com/app/id6749164175" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer" data-i18n="tryDoneBtn">App Store 下载</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="moments">
+        <div class="container">
+            <span class="eyebrow section-eyebrow" data-i18n="eyeMoments">为这些时刻而生</span>
+            <h2 class="section-title" data-i18n="momentsTitle">总有一个时刻，适合安静下来</h2>
+            <p class="section-sub" data-i18n="momentsSub">四个真实场景，四种进入方式。</p>
+            <div class="moments-grid">
+                <div class="moment-card reveal">
+                    <span class="moment-time">23:30</span>
+                    <div class="moment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/></svg></div>
+                    <h3 data-i18n="m1Title">睡不着的夜</h3>
+                    <p data-i18n="m1Desc">思绪停不下来？让引导语音替你放慢呼吸，把身体先送入睡眠。</p>
+                    <span class="moment-tag"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="m1Tag">7 天深睡计划</span></span>
+                </div>
+                <div class="moment-card reveal">
+                    <span class="moment-time">14:00</span>
+                    <div class="moment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></div>
+                    <h3 data-i18n="m2Title">高压的下午</h3>
+                    <p data-i18n="m2Desc">会议之间的十分钟，做一段快速平复练习，有疑问随时问 AI 教练。</p>
+                    <span class="moment-tag"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="m2Tag">缓解焦虑 + AI 教练</span></span>
+                </div>
+                <div class="moment-card reveal">
+                    <span class="moment-time">08:00</span>
+                    <div class="moment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg></div>
+                    <h3 data-i18n="m3Title">想养成习惯的早晨</h3>
+                    <p data-i18n="m3Desc">出门前的五分钟计时冥想，心情与连续天数自动记下，习惯悄悄长成。</p>
+                    <span class="moment-tag"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="m3Tag">计时冥想 + 记录</span></span>
+                </div>
+                <div class="moment-card reveal">
+                    <span class="moment-time">20:00</span>
+                    <div class="moment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4.97 0-9 3.58-9 8 0 4.42 4.03 8 9 8 .34 0 .67-.02 1-.05L18 21l-.7-3.03C19.94 16.5 21 14.36 21 11c0-4.42-4.03-8-9-8z"/></svg></div>
+                    <h3 data-i18n="m4Title">第一次尝试冥想</h3>
+                    <p data-i18n="m4Desc">不知道从哪开始？引导冥想一步一步带你入门，零基础也不慌。</p>
+                    <span class="moment-tag"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="m4Tag">引导冥想</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="features" class="features">
         <div class="container">
+            <span class="eyebrow section-eyebrow" data-i18n="eyeFeatures">功能特色</span>
             <h2 class="section-title" data-i18n="featuresTitle">功能特色</h2>
             <p class="section-sub" data-i18n="featuresSub">为放松、入睡与专注设计的每一个细节。</p>
             <div class="features-grid">
@@ -208,8 +280,55 @@
         </div>
     </section>
 
+    <section id="library" class="library">
+        <div class="container">
+            <span class="eyebrow section-eyebrow" data-i18n="eyeLibrary">内容库</span>
+            <h2 class="section-title" data-i18n="libTitle">看看里面都有什么</h2>
+            <p class="section-sub" data-i18n="libSub">从 7 晚的睡眠旅程到自由计时，每一段都有它的位置。</p>
+            <div class="library-grid">
+                <div class="lib-plan reveal">
+                    <h3 data-i18n="libPlanTitle">7 天深度睡眠计划</h3>
+                    <p data-i18n="libPlanDesc">每晚一段引导，循序渐进，从放松身体到自然入睡。</p>
+                    <ol class="day-rail">
+                        <li><span class="day-dot" aria-hidden="true">1</span><div class="day-txt"><strong data-i18n="libN1">第 1 晚</strong><span data-i18n="libD1">放松身体</span></div></li>
+                        <li><span class="day-dot" aria-hidden="true">2</span><div class="day-txt"><strong data-i18n="libN2">第 2 晚</strong><span data-i18n="libD2">放慢呼吸</span></div></li>
+                        <li><span class="day-dot" aria-hidden="true">3</span><div class="day-txt"><strong data-i18n="libN3">第 3 晚</strong><span data-i18n="libD3">身体扫描</span></div></li>
+                        <li><span class="day-dot" aria-hidden="true">4</span><div class="day-txt"><strong data-i18n="libN4">第 4 晚</strong><span data-i18n="libD4">放下思绪</span></div></li>
+                        <li><span class="day-dot" aria-hidden="true">5</span><div class="day-txt"><strong data-i18n="libN5">第 5 晚</strong><span data-i18n="libD5">延长呼气</span></div></li>
+                        <li><span class="day-dot" aria-hidden="true">6</span><div class="day-txt"><strong data-i18n="libN6">第 6 晚</strong><span data-i18n="libD6">安定心绪</span></div></li>
+                        <li><span class="day-dot" aria-hidden="true">7</span><div class="day-txt"><strong data-i18n="libN7">第 7 晚</strong><span data-i18n="libD7">自然入睡</span></div></li>
+                    </ol>
+                </div>
+                <div class="lib-collections">
+                    <div class="lib-card reveal">
+                        <div class="lib-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.3-9A5.4 5.4 0 0 1 12 6.6 5.4 5.4 0 0 1 21.3 12C19 16.5 12 21 12 21z"/></svg></div>
+                        <h4 data-i18n="libC1t">缓解焦虑系列</h4>
+                        <p data-i18n="libC1d">高压时刻的快速平复练习。</p>
+                    </div>
+                    <div class="lib-card reveal">
+                        <div class="lib-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.9A7 7 0 0 1 16.7 9.4 5 5 0 1 1 18 19H7a4 4 0 0 1-3-4.1z"/><path d="M8 21.5v.01M12 21.5v.01M16 21.5v.01"/></svg></div>
+                        <h4 data-i18n="libC2t">自然环境音</h4>
+                        <p data-i18n="libC2d">雨声、森林与海浪，如临其境。</p>
+                    </div>
+                    <div class="lib-card reveal">
+                        <div class="lib-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+                        <h4 data-i18n="libC3t">专业冥想音乐</h4>
+                        <p data-i18n="libC3d">为放松与专注而作的音乐。</p>
+                    </div>
+                    <div class="lib-card reveal">
+                        <div class="lib-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></div>
+                        <h4 data-i18n="libC4t">自由计时</h4>
+                        <p data-i18n="libC4d">任意时长，背景音由你选。</p>
+                    </div>
+                    <div class="lib-chip reveal"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20"/></svg><span data-i18n="libChip">26 段精选，持续更新</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="screenshots" class="screenshots">
         <div class="container">
+            <span class="eyebrow section-eyebrow" data-i18n="eyeShots">真实截图</span>
             <h2 class="section-title" data-i18n="screenshotsTitle">应用截图</h2>
             <p class="section-sub" data-i18n="screenshotsSub">左右滑动，点击可放大查看。</p>
             <div class="gallery">
@@ -227,6 +346,10 @@
                         <div class="phone"><img src="images/screenshot-3.png" alt="AI冥想 精选冥想音频库" width="600" height="1300" loading="lazy" decoding="async"></div>
                         <figcaption data-i18n="shot3">丰富的冥想音频</figcaption>
                     </figure>
+                    <figure class="shot reveal">
+                        <div class="phone"><img src="images/screenshot-4.png" alt="AI冥想 背景音乐选择界面" width="600" height="1300" loading="lazy" decoding="async"></div>
+                        <figcaption data-i18n="shot4">背景音随心选</figcaption>
+                    </figure>
                 </div>
                 <button class="gal-arrow next" type="button" aria-label="下一张" id="galNext">›</button>
             </div>
@@ -237,6 +360,7 @@
     <section class="privacy">
         <div class="container privacy-card">
             <div class="privacy-lead">
+                <span class="eyebrow section-eyebrow privacy-eyebrow" data-i18n="eyePrivacy">隐私承诺</span>
                 <h2 data-i18n="privacyTitle">你的练习，只属于你</h2>
                 <p data-i18n="privacyDesc">无需注册，无需账号。冥想历史与心情记录保存在设备本地，我们不追踪、不贩卖你的数据。</p>
             </div>
@@ -249,8 +373,61 @@
         </div>
     </section>
 
+    <section class="compare">
+        <div class="container">
+            <span class="eyebrow section-eyebrow" data-i18n="eyeCompare">对比</span>
+            <h2 class="section-title" data-i18n="compareTitle">为什么是 AI冥想</h2>
+            <p class="section-sub" data-i18n="compareSub">同样是想安静下来，体验可以很不一样。</p>
+            <div class="table-scroll reveal">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th data-i18n="cCol1">自己摸索</th>
+                            <th data-i18n="cCol2">传统冥想 App</th>
+                            <th class="c-hl"><span class="c-brand" data-i18n="cCol3">AI冥想</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th data-i18n="cR1">个性化指导</th>
+                            <td data-i18n="cR1a">没有反馈，全靠自己琢磨</td>
+                            <td data-i18n="cR1b">固定课程，人人相同</td>
+                            <td class="c-hl"><span class="c-cell"><svg class="c-check" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="cR1c">AI 教练根据你的记录调整</span></span></td>
+                        </tr>
+                        <tr>
+                            <th data-i18n="cR2">上手门槛</th>
+                            <td data-i18n="cR2a">不知道从哪开始</td>
+                            <td data-i18n="cR2b">先注册，再挑方案</td>
+                            <td class="c-hl"><span class="c-cell"><svg class="c-check" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="cR2c">无需注册，30 秒开始</span></span></td>
+                        </tr>
+                        <tr>
+                            <th data-i18n="cR3">你的数据</th>
+                            <td class="c-dash">—</td>
+                            <td data-i18n="cR3b">常常同步到云端</td>
+                            <td class="c-hl"><span class="c-cell"><svg class="c-check" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="cR3c">全部留在设备上</span></span></td>
+                        </tr>
+                        <tr>
+                            <th data-i18n="cR4">价格</th>
+                            <td data-i18n="cR4a">免费，但没有引导</td>
+                            <td data-i18n="cR4b">通常需要订阅</td>
+                            <td class="c-hl"><span class="c-cell"><svg class="c-check" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="cR4c">免费下载</span></span></td>
+                        </tr>
+                        <tr>
+                            <th data-i18n="cR5">语言</th>
+                            <td class="c-dash">—</td>
+                            <td data-i18n="cR5b">多为单一语言</td>
+                            <td class="c-hl"><span class="c-cell"><svg class="c-check" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="cR5c">中英双语</span></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
     <section id="faq" class="faq">
         <div class="container">
+            <span class="eyebrow section-eyebrow" data-i18n="eyeFaq">答疑</span>
             <h2 class="section-title" data-i18n="faqTitle">常见问题</h2>
             <div class="faq-list">
                 <details class="faq-item reveal"><summary data-i18n="q1">需要注册或联网吗？</summary><p data-i18n="a1">无需注册即可使用。计时冥想与已缓存的音频可离线练习；AI 对话需要联网。</p></details>
@@ -309,9 +486,22 @@
                     <p><span data-i18n="footerEmail">邮箱</span>: <a href="mailto:1597498880weiproduct@gmail.com">1597498880weiproduct@gmail.com</a></p>
                     <p><span data-i18n="footerWebsite">网站</span>: <a href="https://weiproduct.com/" target="_blank" rel="noopener noreferrer">weiproduct.com</a></p>
                 </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footerGet">获取 App</h4>
+                    <div class="qr-card"><img src="images/qr-code.png" alt="App Store 二维码" width="108" height="108" loading="lazy" decoding="async"></div>
+                    <p class="qr-hint" data-i18n="footerScan">扫码前往 App Store</p>
+                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; <span id="currentYear">2026</span> <span data-i18n="footerRights">WeiProduct. 保留所有权利。</span></p>
+                <div class="footer-controls">
+                    <button class="foot-ctl js-theme-toggle" type="button" aria-label="切换深色模式">
+                        <svg class="i-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+                        <svg class="i-moon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/></svg>
+                        <span class="js-theme-label" data-i18n="themeDark">深色模式</span>
+                    </button>
+                    <button class="foot-ctl js-lang-switch" type="button" aria-label="Switch language">EN</button>
+                </div>
             </div>
         </div>
     </footer>
