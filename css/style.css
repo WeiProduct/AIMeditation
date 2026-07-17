@@ -134,7 +134,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .breathe-ring.r2 { animation-delay: 5s; }
 .device { position: relative; z-index: 2; width: 268px; max-width: 72vw; border-radius: 44px; padding: 12px; background: linear-gradient(160deg, #2a2e4a, #10111f); box-shadow: var(--shadow-lg); }
 .device::before { content: ""; position: absolute; top: 16px; left: 50%; transform: translateX(-50%); width: 84px; height: 20px; background: #10111f; border-radius: 999px; z-index: 3; }
-.device img { width: 100%; border-radius: 33px; display: block; }
+.device img { width: 100%; height: auto; border-radius: 33px; display: block; }
 .breathe-cue { position: absolute; z-index: 4; left: 50%; bottom: 4%; transform: translateX(-50%); width: 128px; height: 36px; }
 .breathe-cue span { position: absolute; inset: 0; display: grid; place-items: center; font-weight: 700; font-size: 14px; letter-spacing: .08em; color: #fff; background: rgba(24,28,52,.62); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.22); border-radius: 999px; }
 .breathe-cue .b-in { opacity: 1; animation: cueIn 10s ease-in-out infinite; }
@@ -155,7 +155,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .proof { padding: 22px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); background: var(--bg-secondary); }
 .proof-row { display: flex; align-items: center; justify-content: space-between; gap: 26px; flex-wrap: wrap; }
 .proof-rating { display: flex; align-items: center; gap: 12px; }
-.stars { color: var(--gold); font-size: 22px; letter-spacing: 2px; }
+.apple-mark { display: flex; align-items: center; color: var(--text-primary); }
+.apple-mark svg { display: block; }
 .proof-sub { display: flex; flex-direction: column; line-height: 1.25; font-size: 13px; color: var(--text-secondary); }
 .proof-sub strong { color: var(--text-primary); font-size: 15px; }
 .proof-stats { display: flex; gap: 34px; flex-wrap: wrap; }
@@ -192,7 +193,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .gal-track::-webkit-scrollbar { display: none; }
 .shot { flex: 0 0 auto; scroll-snap-align: center; text-align: center; }
 .phone { width: 260px; max-width: 70vw; border-radius: 34px; padding: 10px; background: linear-gradient(160deg, #2a2e4a, #10111f); box-shadow: var(--shadow-lg); cursor: zoom-in; }
-.phone img { width: 100%; border-radius: 26px; display: block; }
+.phone img { width: 100%; height: auto; border-radius: 26px; display: block; }
 .shot figcaption { margin-top: 16px; font-weight: 600; color: var(--text-secondary); font-size: 15px; }
 .gal-arrow { position: absolute; top: 42%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--border-color); background: var(--card); color: var(--text-primary); font-size: 24px; line-height: 1; cursor: pointer; box-shadow: var(--shadow); z-index: 2; transition: all .2s; }
 .gal-arrow:hover { background: var(--primary-color); color: #fff; border-color: var(--primary-color); }
